@@ -43,7 +43,7 @@ try {
     const code = await fetch('https://captcha-120546510085.asia-northeast1.run.app', { method: 'POST', body }).then(r => r.text())
     await page.locator('[placeholder="上の画像の数字を入力"]').fill(code)
     await setTimeout(1000)
-    await page.locator('.hpeY1 input[type="checkbox"]').click()
+    await page.locator('label.hpeY1').click()
     await setTimeout(6000)
     await page.locator('text=無料VPSの利用を継続する').click()
 } catch (e) {
