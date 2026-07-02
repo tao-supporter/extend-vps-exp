@@ -30,7 +30,7 @@ try {
     await page.locator('#memberid').fill(process.env.EMAIL)
     await page.locator('#user_password').fill(process.env.PASSWORD)
     await page.locator('text=ログインする').click()
-    await page.locator('modal__close').click()
+    await page.locator('.modal__close').click()
     await page.waitForNavigation({ waitUntil: 'networkidle2' })
     await page.locator('a[href^="/xapanel/xvps/server/detail?id="]').click()
     await page.locator('text=更新する').click()
